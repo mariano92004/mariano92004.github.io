@@ -21,21 +21,3 @@ assets/img/       capturas en WebP
 assets/favicon.svg
 .nojekyll         evita que GitHub Pages procese el sitio con Jekyll
 ```
-
-## Verlo en local
-
-El tramado lee los píxeles de las imágenes, así que hace falta servir la carpeta por HTTP (abrir el archivo directo no alcanza):
-
-```
-python -m http.server 4173
-```
-
-y abrir http://localhost:4173
-
-## Agregar un proyecto
-
-1. Exportar la captura a WebP dentro de `assets/img/`.
-2. Copiar un bloque `<figure class="shot">` en `index.html`, con `width` y `height` reales y un `alt` descriptivo.
-3. Si el texto tiene `data-i18n="clave"`, agregar la misma clave en inglés en `js/i18n.js`.
-
-Las cifras de ventas del panel de Equipos MET están pixeladas a propósito.
