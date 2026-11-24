@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariano Trevisan</title>
+  <meta name="description" content="Portfolio de Mariano Trevisan, estudiante de Ingeniería en Informática en la UNL: sistemas de bajo nivel, embebidos y software en producción.">
+  <meta name="theme-color" content="#eef2f5">
+  <meta property="og:title" content="Mariano Trevisan">
+  <meta property="og:description" content="Estudiante de Ingeniería en Informática en la UNL. Sistemas de bajo nivel, embebidos y software en producción.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Doto:wght,ROND@100..900,0..100&family=Hanken+Grotesk:ital,wght@0,300..700;1,400&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#proyectos" data-i18n="skip">Saltar a los proyectos</a>
+
+  <header class="hero" id="inicio">
+    <canvas class="field" aria-hidden="true"></canvas>
+
+    <nav class="topbar wrap" aria-label="Secciones" data-i18n-aria="navLabel">
+      <ul class="topbar-links">
+        <li><a href="#proyectos" data-i18n="navProjects">Proyectos</a></li>
+        <li><a href="#herramientas" data-i18n="navTools">Herramientas</a></li>
+        <li><a href="#contacto" data-i18n="navContact">Contacto</a></li>
+      </ul>
+      <button class="lang" type="button" lang="en" data-lang-toggle><span class="lang-long">English</span><span class="lang-short">EN</span></button>
+    </nav>
+
+    <div class="hero-copy wrap">
+      <h1 class="name"><span>Mariano</span> <span>Trevisan</span></h1>
+      <div class="hero-row">
+        <p class="lede" data-i18n="lede">Estudio Ingeniería en Informática en la UNL. Me interesan los sistemas de bajo nivel, los embebidos y la seguridad, y construir software que alguien usa todos los días.</p>
+        <ul class="hero-links">
+          <li><a href="https://github.com/mariano92004" rel="me">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/mariano-trevisan-52a0b0341" rel="me">LinkedIn</a></li>
+          <li class="where" data-i18n="where">Santa Fe, Argentina</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="facts wrap" aria-label="Datos" data-i18n-aria="factsLabel">
+      <dl class="facts-list">
+        <div>
+          <dt data-i18n="factDegreeT">Carrera</dt>
+          <dd data-i18n="factDegree">Ingeniería en Informática en la FICH, Universidad Nacional del Litoral. Empecé en 2022 y el egreso previsto es en 2028.</dd>
+        </div>
+        <div>
+          <dt data-i18n="factFocusT">Me interesa</dt>
+          <dd data-i18n="factFocus">Arquitectura de computadoras, sistemas embebidos y seguridad en aplicaciones web y móviles.</dd>
+        </div>
+        <div>
+          <dt data-i18n="factShipT">Proyectos reales</dt>
+          <dd data-i18n="factShip">Una tienda online con panel de administración para la empresa familiar y una app Android para veterinarias que lee una balanza por Bluetooth.</dd>
+        </div>
+        <div>
+          <dt data-i18n="factLangT">Idiomas</dt>
+          <dd data-i18n="factLang">Español nativo, inglés B2.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="projects wrap" id="proyectos" aria-labelledby="proyectos-titulo">
+      <div class="section-head">
+        <h2 id="proyectos-titulo" data-i18n="projectsTitle">Proyectos</h2>
+      </div>
+
+      <!-- Equipos MET -->
+      <article class="project project-met" aria-labelledby="met-titulo">
+        <div class="project-text">
+          <h3 id="met-titulo">Equipos MET</h3>
+          <p class="project-sub" data-i18n="metSub">Tienda online y panel de administración para la empresa familiar. 2026 a hoy.</p>
+          <p data-i18n="metBody">Una tienda hecha desde cero, sin CMS, para una fábrica de motores para portones del Parque Industrial de Avellaneda, Santa Fe.</p>
+          <ul class="points">
+            <li data-i18n="metP1">Arquitectura en capas sobre Node.js y PostgreSQL (Neon): la lógica de negocio, el acceso a datos y la presentación no se mezclan.</li>
+            <li data-i18n="metP2">Compra como invitado: no se guardan cuentas de clientes ni datos de tarjetas.</li>
+            <li data-i18n="metP3">Panel de administración con doble factor, registro de cambios y validación de entradas contra inyecciones.</li>          </ul>
+          <p class="stack">Node.js, PostgreSQL (Neon), Cloudflare Workers, Vercel</p>
+        </div>
+
+        <div class="project-media gallery">
+          <figure class="shot shot-wide">
+            <button class="shot-btn" type="button">
+              <img src="assets/img/met-inicio.webp" width="1518" height="698" loading="lazy" decoding="async"
+                alt="Inicio de la tienda Equipos MET con el título «Lo fabricamos nosotros» y un kit corredizo MP300 a la venta."
+                data-i18n-alt="metImg1Alt">
+              <canvas aria-hidden="true"></canvas>
+            </button>
+            <figcaption data-i18n="metImg1">Inicio de la tienda.</figcaption>
+          </figure>
+          <figure class="shot">
+            <button class="shot-btn" type="button">
+              <img src="assets/img/met-catalogo.webp" width="1514" height="698" loading="lazy" decoding="async"
+                alt="Sección de categorías: motores corredizos, cortadoras de césped, motores levadizos, bombeadores y ventiladores."
+                data-i18n-alt="metImg2Alt">
+              <canvas aria-hidden="true"></canvas>
+            </button>
+            <figcaption data-i18n="metImg2">Categorías del catálogo.</figcaption>
+          </figure>
+          <figure class="shot">
+            <button class="shot-btn" type="button">
+              <img src="assets/img/met-motorreductor.webp" width="1515" height="634" loading="lazy" decoding="async"
+                alt="Sección oscura que describe el motorreductor por dentro: 0,5 CV, 4 rodamientos, hasta 50 controles y portones de hasta 500 kg."
+                data-i18n-alt="metImg3Alt">
+              <canvas aria-hidden="true"></canvas>
+            </button>
+            <figcaption data-i18n="metImg3">Ficha del motorreductor.</figcaption>
+          </figure>
+          <figure class="shot">
+            <button class="shot-btn" type="button">
+              <img src="assets/img/met-productos.webp" width="1514" height="704" loading="lazy" decoding="async"
+                alt="Menú desplegable de productos con portones, jardín, motores y hogar, repuestos y un control remoto en oferta."
+                data-i18n-alt="metImg4Alt">
+              <canvas aria-hidden="true"></canvas>
+            </button>
+            <figcaption data-i18n="metImg4">Menú de productos y repuestos.</figcaption>
+          </figure>
+          <figure class="shot">
+            <button class="shot-btn" type="button">
+              <img src="assets/img/met-empresa.webp" width="1515" height="697" loading="lazy" decoding="async"
+                alt="Página de la empresa con el título «Fabricamos lo que vendemos» y fotos de engranajes y cortadoras de césped."
+                data-i18n-alt="metImg5Alt">
+              <canvas aria-hidden="true"></canvas>
+            </button>
+            <figcaption data-i18n="metImg5">Página de la empresa.</figcaption>
+          </figure>
+          <figure class="shot shot-wide">
+            <button class="shot-btn" type="button">
+              <img src="assets/img/met-panel.webp" width="1518" height="693" loading="lazy" decoding="async"
+                alt="Resumen del panel de administración con ventas por día, productos más vendidos y pedidos pendientes. Las cifras están pixeladas."
+                data-i18n-alt="metImg6Alt">
+              <canvas aria-hidden="true"></canvas>
+            </button>
+            <figcaption data-i18n="metImg6">Panel de administración. Pixelé las cifras de ventas.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- SmartBalance -->
+      <article class="project project-sb" aria-labelledby="sb-titulo">
+        <div class="project-text">
+          <h3 id="sb-titulo">SmartBalance</h3>
+          <p class="project-sub" data-i18n="sbSub">App de balanza y dosificación para veterinarias, en Android.</p>
+          <p class="stack">Ionic, Angular, TypeScript, Capacitor, Android, Bluetooth LE</p>
+        </div>
+        <div class="project-body">
+          <p data-i18n="sbBody">Una app para tablet que lee el peso desde una balanza Bluetooth y lo guarda en la ficha del paciente. La migré pantalla por pantalla desde Xamarin/.NET a Ionic, Angular y Capacitor, y la probé en una tablet real.</p>
+          <ul class="points">
+            <li data-i18n="sbP1">Plugin nativo de Capacitor para leer en vivo una balanza Bluetooth Low Energy, más una balanza simulada para probar sin el equipo.</li>
+            <li data-i18n="sbP2">Fichas de pacientes, historia clínica y cálculo de dosis y raciones según el peso, todo guardado sin conexión.</li>          </ul>
+        </div>
+        <figure class="shot shot-strip">
+          <button class="shot-btn" type="button">
+            <img src="assets/img/smartbalance-pantallas.webp" width="1990" height="844" loading="lazy" decoding="async"
+              alt="Cinco pantallas de SmartBalance: un pesaje en curso, la ficha de un perro con su gráfico de peso, la configuración de la balanza simulada y las mismas vistas en tema oscuro."
+              data-i18n-alt="sbImgAlt">
+            <canvas aria-hidden="true"></canvas>
+          </button>
+          <figcaption data-i18n="sbImg">Pesaje, ficha del paciente y conexión con la balanza, en tema claro y oscuro.</figcaption>
+        </figure>
+      </article>
+
+      <!-- Sensor de nivel -->
+      <article class="project project-tank" aria-labelledby="tank-titulo">
+        <div class="project-text">
+          <h3 id="tank-titulo" data-i18n="tankTitle">Sensor de nivel ultrasónico</h3>
+          <p class="project-sub" data-i18n="tankSub">Trabajo final de Organización de las Computadoras, 2026.</p>
+          <p data-i18n="tankBody">Un monitor de nivel para tanques de agua con un ESP32-C3 SuperMini, un sensor HC-SR04, un buzzer de alarma y salida por UART a la PC.</p>
+          <ul class="points">
+            <li data-i18n="tankP1">Firmware repartido entre C (ESP-IDF) y assembly RISC-V escrito a mano para manejar el buzzer.</li>          </ul>
+          <p class="stack">C, RISC-V Assembly, ESP-IDF, ESP32-C3</p>
+        </div>
+        <div class="tank" role="group" aria-labelledby="tank-label">
+          <canvas class="tank-canvas" width="220" height="300" aria-hidden="true"></canvas>
+          <div class="tank-controls">
+            <label id="tank-label" for="tank-range" data-i18n="tankRange">Nivel del agua en la simulación</label>
+            <input id="tank-range" type="range" min="0" max="100" value="62">
+            <p class="tank-readout" aria-live="polite">
+              <span data-i18n="tankDist">Distancia medida</span> <output id="tank-dist">43 cm</output><br>
+              <span data-i18n="tankLevel">Nivel</span> <output id="tank-pct">62 %</output>
+            </p>
+            <p class="tank-note" data-i18n="tankNote">Ilustración: el sensor está arriba y mide la distancia hasta el agua.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Otros -->
+      <div class="others" aria-labelledby="otros-titulo">
+        <h3 id="otros-titulo" data-i18n="othersTitle">Otros trabajos</h3>
+        <ul class="others-list">
+          <li>
+            <span class="others-name" data-i18n="umlName">Validador de diagramas UML</span>
+            <span class="others-desc" data-i18n="umlDesc">Prototipo que revisa si un diagrama UML es correcto modelándolo como un lenguaje formal, con gramáticas y parsing shift-reduce.</span>
+            <span class="others-stack">Python</span>
+          </li>
+          <li>
+            <span class="others-name" data-i18n="rvName">RISC-V y C++</span>
+            <span class="others-desc" data-i18n="rvDesc">Algoritmos, manejo de memoria y de registros escritos en assembly RISC-V. En C++, aplicaciones con templates, una clase propia para archivos binarios e interfaces de escritorio.</span>
+            <span class="others-stack">RISC-V Assembly, C++, wxWidgets</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tools wrap" id="herramientas" aria-labelledby="herramientas-titulo">
+      <h2 id="herramientas-titulo" data-i18n="toolsTitle">Herramientas</h2>
+      <dl class="tools-list">
+        <div>
+          <dt data-i18n="toolsLangT">Lenguajes</dt>
+          <dd>C, C++, Python, JavaScript, TypeScript, Java, RISC-V Assembly, SQL, Prolog, Racket</dd>
+        </div>
+        <div>
+          <dt data-i18n="toolsTechT">Frameworks y plataformas</dt>
+          <dd>Node.js, Angular, Ionic, Capacitor, Android SDK, Bluetooth LE, ESP-IDF, PostgreSQL (Neon), FastAPI, React, Vercel, Cloudflare, Linux, Git</dd>
+        </div>
+        <div>
+          <dt data-i18n="toolsAreasT">Áreas</dt>
+          <dd data-i18n="toolsAreas">Sistemas embebidos, análisis de bajo nivel, arquitectura de computadoras, fundamentos de ciberseguridad, seguridad en apps web y móviles, desarrollo de APIs, arquitectura en capas, diseño UX/UI e ingeniería de software (UML, GRASP, patrones de arquitectura).</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="contact wrap" id="contacto" aria-labelledby="contacto-titulo">
+    <h2 id="contacto-titulo" data-i18n="contactTitle">Contacto</h2>
+    <p class="contact-text" data-i18n="contactText">Si tenés una pasantía, un proyecto o una pregunta, escribime por LinkedIn. El código está en GitHub.</p>
+    <ul class="contact-links">
+      <li><a href="https://www.linkedin.com/in/mariano-trevisan-52a0b0341" rel="me">LinkedIn</a></li>
+      <li><a href="https://github.com/mariano92004" rel="me">GitHub</a></li>
+    </ul>
+    <p class="colophon"><span data-i18n="colophon">Todo hecho con mucho ❤️ y ☕ desde Santa Fe Capital, Argentina</span> © 2026 Mariano Trevisan</p>
+  </footer>
+
+  <dialog class="viewer" aria-labelledby="viewer-cap">
+    <figure>
+      <img alt="">
+      <figcaption id="viewer-cap"></figcaption>
+    </figure>
+    <button class="viewer-close" type="button" data-i18n="close">Cerrar</button>
+  </dialog>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
