@@ -300,6 +300,13 @@ h3 {
   margin-top: 8px !important;
 }
 
+/* quiénes participaron, pegado al subtítulo */
+.project-text > .project-team {
+  margin-top: 6px;
+  color: var(--slate);
+  font-size: 0.9375rem;
+}
+
 .points {
   display: grid;
   gap: 10px;
