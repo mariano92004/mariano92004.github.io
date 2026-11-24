@@ -25,7 +25,7 @@ window.I18N_EN = {
   projectsTitle: "Projects",
 
   metSub: "Online store and admin panel for a company. 2026 to today.",
-  metBody: "A store built from scratch, with no CMS, for a gate motor manufacturer in the Avellaneda Industrial Park, Santa Fe.",
+  metBody: "A store built for a gate motor manufacturer in the Avellaneda Industrial Park, Santa Fe.",
   metP1: "Layered architecture on Node.js and PostgreSQL (Neon): business logic, data access and presentation stay apart.",
   metP2: "Guest checkout: no customer accounts or card data are stored.",
   metP3: "Admin panel with two-factor authentication, change tracking and input validation against injection attacks.",  metImg1: "Store home page.",
