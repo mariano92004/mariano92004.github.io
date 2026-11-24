@@ -365,7 +365,7 @@ h3 {
   object-position: top center;
 }
 
-/* SmartBalance: título y cuerpo arriba, tira de pantallas a todo el ancho */
+/* WeighMy: título y cuerpo arriba, tira de pantallas a todo el ancho */
 .project-sb .project-text { grid-column: 1 / span 4; }
 .project-sb .project-body { grid-column: 6 / -1; }
 .project-sb .project-body > * + * { margin-top: 14px; }

@@ -42,10 +42,11 @@ window.I18N_EN = {
   metImg6Alt: "Admin panel overview with daily sales, best sellers and pending orders. The figures are pixelated.",
 
   sbSub: "Scale and dosage app for veterinary clinics, on Android.",
-  sbBody: "A tablet app that reads the weight from a Bluetooth scale and saves it to the patient's record. We migrated it screen by screen from Xamarin/.NET to Ionic, Angular and Capacitor.",
+  sbBody: "A tablet app that reads the weight from a Bluetooth scale and saves it to the patient's record. I migrated it screen by screen from Xamarin/.NET to Ionic, Angular and Capacitor.",
   sbP1: "Native Capacitor plugin that reads a Bluetooth Low Energy scale live, plus a simulated scale for testing without the hardware.",
-  sbP2: "Patient records, clinical notes and weight-based dosage and food ration calculations, all stored offline.",  sbImg: "Weighing, patient record and scale connection, in light and dark themes.",
-  sbImgAlt: "Five SmartBalance screens: a weighing in progress, a dog's record with its weight chart, the simulated scale settings, and the same views in dark theme.",
+  sbP2: "Patient records, clinical notes and weight-based dosage and food ration calculations, all stored offline.",
+  sbImg: "Weighing, patient record and scale connection, in light and dark themes.",
+  sbImgAlt: "Five WeighMy screens: a weighing in progress, a dog's record with its weight chart, the simulated scale settings, and the same views in dark theme.",
 
   tankTitle: "Ultrasonic tank level sensor",
   tankSub: "Final project for Computer Organization, 2026.",
