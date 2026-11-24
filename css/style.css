@@ -474,6 +474,157 @@ h3 {
 }
 
 /* ------------------------------------------------------------
+   Validador UML: el analizador paso a paso
+   ------------------------------------------------------------ */
+
+.project-uml .project-text { grid-column: 1 / span 5; }
+.project-uml .parser { grid-column: 7 / -1; align-self: start; }
+.project-uml .gallery { grid-column: 1 / -1; margin-top: 12px; }
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+}
+
+/* sobre la misma grilla fina del inicio */
+.parser {
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(to right, rgba(19, 35, 58, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(19, 35, 58, 0.05) 1px, transparent 1px);
+  background-size: var(--cell) var(--cell);
+  border: 1px solid var(--frost);
+}
+
+.parser-title { font-weight: 500; }
+
+.parser button {
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--frost);
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.parser button:hover:not(:disabled) { border-color: var(--celeste); }
+.parser button:disabled { color: var(--slate); opacity: 0.55; cursor: default; }
+.parser button[aria-pressed="true"] { border-color: var(--ink); }
+
+.parser-examples,
+.parser-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.parser-source {
+  font-family: var(--dots);
+  font-weight: 700;
+  font-variation-settings: "ROND" 100;
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  line-height: 1.2;
+  color: var(--slate);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.6em;
+}
+
+.parser-source .is-read { color: var(--ink); }
+.parser-source .is-bad { color: var(--cobalt); text-decoration: underline dotted 2px; }
+
+.parser-row {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+}
+
+.parser-label {
+  color: var(--slate);
+  font-size: 0.875rem;
+  padding-top: 8px;
+}
+
+.parser-tiles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 46px;
+}
+
+/* cada símbolo es una baldosa: terminales en tinta, no terminales tramados */
+.tile {
+  display: grid;
+  align-content: center;
+  min-width: 46px;
+  min-height: 46px;
+  padding: 5px 8px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.tile-val { font-size: 0.9375rem; }
+
+.tile-t { background: var(--ink); color: var(--paper); }
+.tile-t .tile-sym { color: var(--celeste); }
+
+.tile-n {
+  color: var(--ink);
+  background-color: var(--celeste);
+  background-image: radial-gradient(circle, rgba(19, 35, 58, 0.28) 0.8px, transparent 1.1px);
+  background-size: 4px 4px;
+  font-weight: 500;
+}
+
+.tile-eps {
+  color: var(--slate);
+  background: transparent;
+  outline: 1px dashed var(--celeste);
+  outline-offset: -1px;
+}
+
+.tile-end { color: var(--slate); outline: 1px solid var(--frost); outline-offset: -1px; }
+
+.tile-err {
+  color: var(--paper);
+  background: repeating-linear-gradient(45deg, var(--ink) 0 3px, var(--cobalt) 3px 6px);
+  font-weight: 500;
+}
+
+.tile.is-bad { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+
+.tile.is-new { animation: tile-in 0.36s steps(3, end); }
+
+@keyframes tile-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile.is-new { animation: none; }
+}
+
+.parser-action {
+  min-height: 4.5em;
+  line-height: 1.5;
+}
+
+.parser-action.is-error { color: var(--cobalt); }
+
+.parser-action.is-final { font-weight: 500; }
+
+/* ------------------------------------------------------------
    Otros trabajos
    ------------------------------------------------------------ */
 
@@ -621,7 +772,11 @@ h3 {
   .project-sb .project-body,
   .project-tank .project-text,
   .project-tank .tank,
+  .project-uml .project-text,
+  .project-uml .parser,
   .project-met .project-media { grid-column: 1 / -1; }
+
+  .project-uml .project-text { max-width: 62ch; }
 
   .project-met .project-text { position: static; }
   .project-met .project-text,
@@ -651,6 +806,10 @@ h3 {
 
   .tank { grid-template-columns: 1fr; }
   .tank-canvas { justify-self: start; }
+
+  .parser { padding: 14px; }
+  .parser-row { grid-template-columns: 1fr; gap: 4px; }
+  .parser-label { padding-top: 0; }
 
   .others-desc,
   .others-stack { grid-column: 1 / -1; text-align: left; }

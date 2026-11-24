@@ -167,6 +167,70 @@
         </figure>
       </article>
 
+      <!-- Validador UML -->
+      <article class="project project-uml" aria-labelledby="uml-titulo">
+        <div class="project-text">
+          <h3 id="uml-titulo" data-i18n="umlTitle">Validador UML</h3>
+          <p class="project-sub" data-i18n="umlSub">App de escritorio y de terminal que revisa diagramas UML como lenguajes formales.</p>
+          <p data-i18n="umlBody">Cada tipo de diagrama tiene su léxico, su gramática libre de contexto y sus reglas semánticas. Un analizador LALR(1) escrito a mano recorre el texto desplazando y reduciendo; después se aplican las reglas que una gramática no puede expresar.</p>
+          <ul class="points">
+            <li data-i18n="umlP1">Cinco tipos de diagrama: clases, casos de uso, actividad, flujo y modelo conceptual de datos, con entre 15 y 22 reglas cada uno.</li>
+            <li data-i18n="umlP2">Errores con línea, columna y código, una traza de cada paso del análisis y salida en JSON para usarlo en integración continua.</li>
+            <li data-i18n="umlP3">Ejecutable para Windows que funciona sin internet y sin tener Python instalado.</li>
+          </ul>
+          <p class="stack">Python, pywebview</p>
+          <ul class="project-links">
+            <li><a href="https://github.com/mariano92004/validador-uml" data-i18n="umlCode">Ver el código</a></li>
+            <li><a href="https://github.com/mariano92004/validador-uml/releases/latest" data-i18n="umlDownload">Descargar para Windows</a></li>
+          </ul>
+        </div>
+
+        <div class="parser" role="group" aria-labelledby="parser-titulo">
+          <p id="parser-titulo" class="parser-title" data-i18n="parserTitle">El analizador, paso a paso</p>
+          <div class="parser-examples">
+            <button type="button" data-parser-example="ok" aria-pressed="true" data-i18n="parserOk">Línea correcta</button>
+            <button type="button" data-parser-example="err" aria-pressed="false" data-i18n="parserErr">Línea con error</button>
+          </div>
+          <p class="parser-source" aria-hidden="true"></p>
+          <div class="parser-row">
+            <span class="parser-label" data-i18n="parserStack">Pila</span>
+            <ol class="parser-tiles" data-parser="stack"></ol>
+          </div>
+          <div class="parser-row">
+            <span class="parser-label" data-i18n="parserInput">Entrada</span>
+            <ol class="parser-tiles" data-parser="input"></ol>
+          </div>
+          <p class="parser-action" aria-live="polite"></p>
+          <div class="parser-controls">
+            <button type="button" data-parser="prev" data-i18n="parserPrev">Anterior</button>
+            <button type="button" data-parser="next" data-i18n="parserNext">Siguiente paso</button>
+            <button type="button" data-parser="reset" data-i18n="parserReset">Reiniciar</button>
+          </div>
+          <p class="tank-note" data-i18n="parserNote">Pasos tomados de la traza real del validador, sobre una línea de un diagrama de clases.</p>
+        </div>
+
+        <div class="project-media gallery">
+          <figure class="shot">
+            <button class="shot-btn" type="button">
+              <img src="assets/img/validador-clases.webp" width="1233" height="612" loading="lazy" decoding="async"
+                alt="El validador con un diagrama de clases en PlantUML a la izquierda y, a la derecha, el resultado Correcto: 245 tokens, aceptado en 607 pasos y 22 reglas revisadas sin errores."
+                data-i18n-alt="umlImg1Alt">
+              <canvas aria-hidden="true"></canvas>
+            </button>
+            <figcaption data-i18n="umlImg1">Un diagrama de clases correcto.</figcaption>
+          </figure>
+          <figure class="shot">
+            <button class="shot-btn" type="button">
+              <img src="assets/img/validador-actividad.webp" width="1190" height="653" loading="lazy" decoding="async"
+                alt="El validador con un diagrama de actividad que tiene errores marcados en sus líneas y, a la derecha, el resultado: 5 errores y 3 avisos, cada uno con su línea, su código y su explicación."
+                data-i18n-alt="umlImg2Alt">
+              <canvas aria-hidden="true"></canvas>
+            </button>
+            <figcaption data-i18n="umlImg2">Un diagrama de actividad con errores marcados línea por línea.</figcaption>
+          </figure>
+        </div>
+      </article>
+
       <!-- Sensor de nivel -->
       <article class="project project-tank" aria-labelledby="tank-titulo">
         <div class="project-text">
@@ -196,11 +260,6 @@
       <div class="others" aria-labelledby="otros-titulo">
         <h3 id="otros-titulo" data-i18n="othersTitle">Otros trabajos</h3>
         <ul class="others-list">
-          <li>
-            <span class="others-name" data-i18n="umlName">Validador de diagramas UML</span>
-            <span class="others-desc" data-i18n="umlDesc">Prototipo que revisa si un diagrama UML es correcto modelándolo como un lenguaje formal, con gramáticas y parsing shift-reduce.</span>
-            <span class="others-stack">Python</span>
-          </li>
           <li>
             <span class="others-name" data-i18n="rvName">RISC-V y C++</span>
             <span class="others-desc" data-i18n="rvDesc">Algoritmos, manejo de memoria y de registros escritos en assembly RISC-V. En C++, aplicaciones con templates, una clase propia para archivos binarios e interfaces de escritorio.</span>
@@ -249,5 +308,6 @@
 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/parser-demo.js"></script>
 </body>
 </html>
